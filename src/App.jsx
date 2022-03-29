@@ -2,7 +2,7 @@ import React from 'react'
 import Button from './components/Button'
 
 const App = () => {
-  return (
+//   return (
     <>
         <div className='main-container'>
             <div className='static-text'>
@@ -11,13 +11,11 @@ const App = () => {
                 <p>Can You score 100%?</p>
             </div>
             <div>
-                <Button/>
+                <Button>BEGIN</Button>
             </div>
         </div>
-        
-
     </>
-  )
+//   )
 }
 
 export default App
