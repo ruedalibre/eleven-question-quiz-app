@@ -1,8 +1,8 @@
 import React from 'react'
-import Button from './components/Button'
+import { BeginButton} from './elements/Button'
 
 const App = () => {
-//   return (
+    return (
     <>
         <div className='main-container'>
             <div className='static-text'>
@@ -11,11 +11,11 @@ const App = () => {
                 <p>Can You score 100%?</p>
             </div>
             <div>
-                <Button>BEGIN</Button>
+                <BeginButton>BEGIN</BeginButton>
             </div>
         </div>
     </>
-//   )
+    )
 }
 
 export default App
