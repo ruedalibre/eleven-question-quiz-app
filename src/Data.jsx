@@ -109,6 +109,17 @@ const data = {
             "incorrect_answers":[
                 "False"
             ]
+        },
+
+        {
+            "category":"Science: Astronomy",
+            "type":"boolean",
+            "difficulty":"hard",
+            "question":"Black holes are not actual holes",
+            "correct_answer":"True",
+            "incorrect_answers":[
+                "False"
+            ]
         }
     ]
 }
