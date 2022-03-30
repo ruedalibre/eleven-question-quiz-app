@@ -22,12 +22,18 @@ const QuizScreen = () => {
 }
 
 const CategoriesContainer = styled.div`
+  display: flex;
+  flex-direction: column;
 
 `
 const CardsContainer = styled.div`
+  display: flex;
+  flex-direction: column;
 
 `
 const AnswerButtonContainer = styled.div`
+  display: flex;
+  flex-direction: column;
 
 `
 export default QuizScreen

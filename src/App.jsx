@@ -30,15 +30,20 @@ const App = () => {
 }
 
 const TitleContainer = styled.h1`
+    display: flex;
+    flex-direction: column;
     margin: 50px 0;
 `;
 
 const TextContainer = styled.h3`
+    display: flex;
+    flex-direction: column;
     margin: 50px 0;
 `;
 
 const ButtonContainer = styled.div`
-
+    display: flex;
+    flex-direction: column;
 `
 
 export default App
