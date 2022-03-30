@@ -1,7 +1,13 @@
-import React from 'react'
-import { BeginButton} from './elements/Button'
+import React, { useState} from 'react'
+import { BeginButton } from './elements/Button'
+
 
 const App = () => {
+    
+    const beginQuiz = () => {
+        // funcion para pasar al componente de QuizScreen
+    }
+    
     return (
     <>
         <div className='main-container'>
@@ -11,7 +17,7 @@ const App = () => {
                 <p>Can You score 100%?</p>
             </div>
             <div>
-                <BeginButton>BEGIN</BeginButton>
+                <button onClick={beginQuiz}>BEGIN</button>
             </div>
         </div>
     </>

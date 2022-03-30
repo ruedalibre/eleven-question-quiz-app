@@ -1,7 +1,6 @@
 import React from "react"
 import CategoryTitle from '../elements/CategoryTitle'
 import QuestionCards from '../elements/QuestionCards'
-import AnswerButtons from '../elements/AnswerButtons'
 import { TrueButton, FalseButton } from "../elements/Button"
 
 import React from 'react'
@@ -9,10 +8,9 @@ import React from 'react'
 const QuizScreen = () => {
   return (
     <>
-        <CategoryTitle category='Entertainment' />
-        <SubcategoryTitle subcategory='Video Games'/>
+        <CategoryTitle category='Entertainment' color='green'/>
+        <SubcategoryTitle subcategory='Video Games' color='blue'/>
         <QuestionCards/>
-        <AnswerButtons/>
         <TrueButton/>
         <FalseButton/>
     </>

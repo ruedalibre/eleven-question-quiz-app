@@ -1,7 +1,7 @@
 import React from "react";
-import FinalScore from './../elementos/FinalScore'
-import AnswerList from './../elementos/AnswerList'
-import { PlayAgainButton } from "./../elementos/Button";
+import FinalScore from '../elements/FinalScore'
+import AnswerList from '../elements/AnswerList'
+import { PlayAgainButton } from "../elements/Button";
 
 import React from 'react'
 
