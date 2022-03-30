@@ -1,13 +1,10 @@
-import React from 'react'
+import styled from 'styled-components'
 
-const Cards = () => {
-    const question = '';
 
-  return (
-    <div>
-        <p>lorem20</p>
-    </div>
-  )
-}
-
-export default Cards
+const Card = styled.div`
+  padding: 20px;
+  margin: 10px;
+  border: 2px solid #000;
+  border-radius: 10px;
+  
+`
