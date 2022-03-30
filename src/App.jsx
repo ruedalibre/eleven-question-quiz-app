@@ -12,12 +12,12 @@ const App = () => {
         <div className='main-container'>
             <div className='static-text'>
                 <h1>Welcome to the Trivia Challenge!</h1>
-                <p>You will be presented with <br /> 
-                Eleven True or False Questions</p>
-                <p>Can You score 100%?</p>
+                <h3>You will be presented with <br /> 
+                Eleven True or False Questions</h3>
+                <h3>Can You score 100%?</h3>
             </div>
             <div className='button-container'>
-                <button onClick={beginQuiz}>BEGIN</button>
+                <button className='begin-button'>BEGIN</button>
             </div>
         </div>
     )
