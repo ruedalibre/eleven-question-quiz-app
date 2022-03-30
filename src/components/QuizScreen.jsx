@@ -1,25 +1,33 @@
 import React from "react"
-import CategoryTitle from '../elements/CategoryTitle'
-import QuestionCards from '../elements/QuestionCards'
-import { TrueButton, FalseButton } from "../elements/Button"
+import Button from './../elements/Button'
 import './QuizScren.css'
+import MainContainer from "../elements/MainContainer"
 
 const QuizScreen = () => {
   return (
-    <div className="quiz-container">
-      <div className="quiz-categories-title">
-        <CategoryTitle category='Entertainment' color='green'/>
-        <SubcategoryTitle subcategory='Video Games' color='blue'/>
-      </div>
-      <div className="cards-container">
-        <QuestionCards/>
-      </div>
-      <div className="answer-button-container">
-        <TrueButton/>
-        <FalseButton/>
-      </div>
-    </div>
+    <MainContainer>
+      <CategoriesContainer>
+        <div category='Entertainment' color='green'/>
+        <div subcategory='Video Games' color='blue'/>
+      </CategoriesContainer>
+      <CardsContainer>
+        <div>CARD</div>
+      </CardsContainer>
+      <AnswerButtonContainer>
+        <Button>True</Button>
+        <Button>False</Button>
+      </AnswerButtonContainer>
+    </MainContainer>
   )
 }
 
+const CategoriesContainer = styled.div`
+
+`
+const CardsContainer = styled.div`
+
+`
+const AnswerButtonContainer = styled.div`
+
+`
 export default QuizScreen

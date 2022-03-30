@@ -1,7 +1,7 @@
 import React from "react";
 import FinalScore from '../elements/FinalScore'
 import AnswerList from '../elements/AnswerList'
-import { PlayAgainButton } from "../elements/Button";
+import Button from './../elements/Button'
 
 import React from 'react'
 
@@ -10,7 +10,7 @@ const ScoreScreen = () => {
     <>
         <FinalScore />
         <AnswerList />
-        <PlayAgainButton />
+        <Button black>Play Again!</Button>
     </>
   )
 }
