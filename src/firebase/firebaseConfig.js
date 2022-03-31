@@ -1,12 +1,16 @@
 import { initializeApp } from "firebase/app";
+import { getFirestore } from "firebase/firestore"
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAxBsO9aj7Gp0-LzCTTwnFiwv0Hi6dr2pc",
-  authDomain: "eleven-question-quiz.firebaseapp.com",
-  projectId: "eleven-question-quiz",
-  storageBucket: "eleven-question-quiz.appspot.com",
-  messagingSenderId: "426820856085",
-  appId: "1:426820856085:web:86ca94912a646e85e2211c"
+  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_FIREBASE_APP_ID
 };
 
 const app = initializeApp(firebaseConfig);
+const db = getFirestore();
+
+export default db;

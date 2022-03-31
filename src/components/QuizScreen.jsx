@@ -1,7 +1,7 @@
 import React from "react"
 import Button from './../elements/Button'
 import MainContainer from "../elements/MainContainer"
-import { BrowserRouter, Route, Routes, Navlink } from "react-router-dom"
+import { BrowserRouter, Route, Routes, Navlink, useParams } from "react-router-dom"
 import CategoryTitleBar from "../elements/CategoryTitleBar"
 import Counter from './../elements/Counter'
 import QuestionCard from "../elements/QuestionCards"
