@@ -1,11 +1,13 @@
 import React from "react"
 import Button from './../elements/Button'
 import MainContainer from "../elements/MainContainer"
-import { BrowserRouter, Route, Routes, Navlink, useParams } from "react-router-dom"
+import { BrowserRouter, Route, Routes, NavLink, useParams } from "react-router-dom"
 import CategoryTitleBar from "../elements/CategoryTitleBar"
-import Counter from './../elements/Counter'
+// import Counter from './../elements/Counter'
+import styled from 'styled-components'
 import QuestionCard from "../elements/QuestionCards"
-import data from "../data/data"
+import AddQuestionForm from "./AddQuestionForm"
+import db from "../firebase/firebaseConfig"
 
 const QuizScreen = () => {
   return (
@@ -15,10 +17,10 @@ const QuizScreen = () => {
         <CategoryTitleBar />
         
         <Routes>
-          <Route path="/data[1]/:id" element={<QuestionCard/>}/>
+          <Route path="/" element={<AddQuestionForm/>}/>
         </Routes>
         
-        <Counter/>
+        {/* <Counter/> */}
 
         <AnswerButtonContainer>
           <Button>T</Button>

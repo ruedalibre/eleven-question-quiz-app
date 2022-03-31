@@ -9,31 +9,47 @@ const AddQuestionForm = () => {
     const [results, changeResults] = useState(''); 
     const [category, changeCategory] = useState('');
     const [subcategory, changeSubcategory] = useState('');
+    const [data_type, ChangeDataType] = useState('');
     const [difficulty, changeDifficulty] = useState('');
     const [question, changeQuestion] = useState('');
     const [correct_answer, changeCorrectAnswer] = useState('');
     const [incorrect_answers, changeIncorrectAnswers] = useState('');
     
-    // Para evitar que la página se refresque
-    const onSubmit = (e) => {
+    // Evitar que la página se refresque
+    const onSubmit = async (e) => {
         e.preventDefault();
-        // Conexión a Firebase
-        addDoc(collection(db, 'quiz_cards'), {
-                "response_code": 1,
+        // Esperar a que cargue la db
+        try {
+            await addDoc(collection(db, 'quiz_cards'), {
+                "response_code": response_code,
                 "results": [
                 {
-                    "category":"Entertainment",
-                    "subcategory": "Video Games",
-                    "type":"boolean",
-                    "difficulty":"hard",
-                    "question":"Unturned originally started as a Roblox game.",
-                    "correct_answer":"True",
+                    "category": category,
+                    "subcategory":subcategory,
+                    "data_type":data_type,
+                    "difficulty": difficulty,
+                    "question": question,
+                    "correct_answer": correct_answer,
                     "incorrect_answers":[
-                        "False"
+                        incorrect_answers
                     ]
-                }
-            ]
-        });
+                }]
+            });
+        } catch(error){
+            console.log(error);
+            console.log("Unexpected error while saving document")
+        }
+       
+        // Limpiar campos
+        changeResponseCode('');
+        changeResults('');
+        changeCategory('');
+        changeSubcategory('');
+        ChangeDataType('');
+        changeDifficulty('');
+        changeQuestion('');
+        changeCorrectAnswer('');
+        changeIncorrectAnswers('');
     }
 
     return (
@@ -69,6 +85,14 @@ const AddQuestionForm = () => {
                 value={subcategory}
                 onChange={(e) => changeSubcategory(e.target.value) }
                 placeholder="Subcategory"
+            />
+
+            <Input
+                type="text"
+                name="data_type"
+                value={data_type}
+                onChange={(e) => ChangeDataType(e.target.value) }
+                placeholder="Data type"
             />
 
             <Input
