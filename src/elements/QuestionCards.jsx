@@ -1,10 +1,14 @@
-import styled from 'styled-components'
+import React from 'react'
+import dataObjects from '../data/data'
 
+const QuestionCard = () => {
+  return (
+    <div>
+      {dataObjects.map((dataObjects) => {
+                  return <Question key={dataObjects.id}>{dataObjects.dataObjects}</Question>
+                })}
+    </div>
+  )
+}
 
-const Card = styled.div`
-  padding: 20px;
-  margin: 10px;
-  border: 2px solid #000;
-  border-radius: 10px;
-  
-`
+export default QuestionCard

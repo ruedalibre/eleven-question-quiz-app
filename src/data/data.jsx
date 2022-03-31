@@ -1,9 +1,8 @@
-import { useDebugValue } from "react";
-
-const data = {
-    "response_code":0,
+export default {
+    "response_code": 0,
     "results": [
         {
+            "id": 1,
             "category":"General Knowledge",
             "subcategory": undefined,
             "type":"boolean",
@@ -16,6 +15,7 @@ const data = {
         },
         
         {
+            "id": 2,
             "category":"Entertainment",
             "subcategory": "Video Games",
             "type":"boolean",
@@ -28,6 +28,7 @@ const data = {
         },
         
         {
+            "id": 3,
             "category":"History",
             "subcategory": undefined,
             "type":"boolean",
@@ -40,6 +41,7 @@ const data = {
         },
         
         {
+            "id": 4,
             "category":"Entertainment",
             "subcategory": "Music",
             "type":"boolean",
@@ -52,6 +54,7 @@ const data = {
         },
         
         {
+            "id": 5,
             "category":"History",
             "subcategory": undefined,
             "type":"boolean",
@@ -64,6 +67,7 @@ const data = {
         },
         
         {
+            "id": 6,
             "category":"Entertainment",
             "subcategory": "Books",
             "type":"boolean",
@@ -76,6 +80,7 @@ const data = {
         },
         
         {
+            "id": 7,
             "category":"Science",
             "subcategory": "Mathematics",
             "type":"boolean",
@@ -88,6 +93,7 @@ const data = {
         },
         
         {
+            "id": 8,
             "category":"Entertainment",
             "subcategory": "Music",
             "type":"boolean",
@@ -100,6 +106,7 @@ const data = {
         },
         
         {
+            "id": 9,
             "category":"Entertainment",
             "subcategory": "Japanese Anime & Manga",
             "type":"boolean",
@@ -112,6 +119,7 @@ const data = {
         },
         
         {
+            "id": 10,
             "category":"Science",
             "subcategory": "Computers",
             "type":"boolean",
@@ -124,6 +132,7 @@ const data = {
         },
 
         {
+            "id": 11,
             "category":"Science",
             "subcategory": "Astronomy",
             "type":"boolean",
@@ -135,4 +144,4 @@ const data = {
             ]
         }
     ]
-}
+};

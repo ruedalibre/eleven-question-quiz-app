@@ -1,8 +1,8 @@
 import React from "react";
-import FinalScore from '../elements/FinalScore'
-import AnswerList from '../elements/AnswerList'
-import Button from './../elements/Button'
 import MainContainer from "../elements/MainContainer";
+import FinalScoreBar from '../elements/FinalScoreBar'
+import ResultsList from '../elements/ResultsList'
+import Button from './../elements/Button'
 import { BrowserRouter } from "react-router-dom";
 
 import React from 'react'
@@ -11,8 +11,13 @@ const ScoreScreen = () => {
   return (
     <BrowserRouter>
       <MainContainer>
-        <FinalScore />
-        <AnswerList />
+        
+        <FinalScoreBar />
+
+        <ResultsContainer>
+          <ResultsList/>
+        </ResultsContainer>
+        
         <ButtonContainer>
           <Button>Play Again!</Button>
         </ButtonContainer>
@@ -22,12 +27,12 @@ const ScoreScreen = () => {
   )
 }
 
-const FinalScoreContainer = styled.div`
+const FinalScoreBar = styled.div`
   display: flex;
   flex-direction: column;
 `
 
-const AnswerListContainer = styled.div`
+const ResultsContainer = styled.div`
   display: flex;
   flex-direction: column;
 `
