@@ -3,19 +3,22 @@ import FinalScore from '../elements/FinalScore'
 import AnswerList from '../elements/AnswerList'
 import Button from './../elements/Button'
 import MainContainer from "../elements/MainContainer";
+import { BrowserRouter } from "react-router-dom";
 
 import React from 'react'
 
 const ScoreScreen = () => {
   return (
-    <MainContainer>
+    <BrowserRouter>
+      <MainContainer>
         <FinalScore />
         <AnswerList />
         <ButtonContainer>
           <Button>Play Again!</Button>
         </ButtonContainer>
         
-    </MainContainer>
+      </MainContainer>
+    </BrowserRouter>
   )
 }
 
