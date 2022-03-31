@@ -1,7 +1,12 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
+import db from './../firebase/firebaseConfig'
+// Import para agregar datos a la colección y acceder a la colección
+import { collection, addDoc } from "firebase/firestore";
 
 const AddQuestionForm = () => {
+    const [response_code, changeResponseCode] = useState('');
+    const [results, changeResults] = useState(''); 
     const [category, changeCategory] = useState('');
     const [subcategory, changeSubcategory] = useState('');
     const [difficulty, changeDifficulty] = useState('');
@@ -9,9 +14,47 @@ const AddQuestionForm = () => {
     const [correct_answer, changeCorrectAnswer] = useState('');
     const [incorrect_answers, changeIncorrectAnswers] = useState('');
     
+    // Para evitar que la página se refresque
+    const onSubmit = (e) => {
+        e.preventDefault();
+        // Conexión a Firebase
+        addDoc(collection(db, 'quiz_cards'), {
+                "response_code": 1,
+                "results": [
+                {
+                    "category":"Entertainment",
+                    "subcategory": "Video Games",
+                    "type":"boolean",
+                    "difficulty":"hard",
+                    "question":"Unturned originally started as a Roblox game.",
+                    "correct_answer":"True",
+                    "incorrect_answers":[
+                        "False"
+                    ]
+                }
+            ]
+        });
+    }
+
     return (
-        <form action="">
-            {/* OJO: EL OBJETO TIENE QUE ACCEDER A OTRO OBJETO PARA COMPLETAR LOS DATOS */}
+        <form action="" onSubmit={onSubmit}>
+            
+            <Input
+                type="number"
+                name="response_code"
+                value={response_code}
+                onChange={(e) => changeResponseCode(e.target.value) }
+                placeholder="Response code"
+            />
+
+            <Input
+                type="text"
+                name="results"
+                value={[results]}
+                onChange={(e) => changeResults(e.target.value) }
+                placeholder="Results"
+            />
+
             <Input
                 type="text"
                 name="category"
