@@ -10,7 +10,8 @@ const FinalScoreBar = () => {
 }
 
 const FinalScoreContainer = styled.div`
-    
+  display: flex;
+  flex-direction: column;
 `
 
 export default FinalScoreBar

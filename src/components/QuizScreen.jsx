@@ -5,6 +5,7 @@ import { BrowserRouter, Route, Routes, Navlink } from "react-router-dom"
 import CategoryTitleBar from "../elements/CategoryTitleBar"
 import Counter from './../elements/Counter'
 import QuestionCard from "../elements/QuestionCards"
+import data from "../data/data"
 
 const QuizScreen = () => {
   return (

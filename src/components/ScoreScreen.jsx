@@ -14,9 +14,7 @@ const ScoreScreen = () => {
         
         <FinalScoreBar />
 
-        <ResultsContainer>
-          <ResultsList/>
-        </ResultsContainer>
+        <ResultsList/>
         
         <ButtonContainer>
           <Button>Play Again!</Button>
@@ -27,15 +25,6 @@ const ScoreScreen = () => {
   )
 }
 
-const FinalScoreBar = styled.div`
-  display: flex;
-  flex-direction: column;
-`
-
-const ResultsContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-`
 const ButtonContainer = styled.div`
   display: flex;
   flex-direction: column;
