@@ -2,13 +2,11 @@ import Button from './elements/Button'
 import styled from 'styled-components'
 import MainContainer from './elements/MainContainer'
 import AddQuestionForm from './components/AddQuestionForm'
-import { BrowserRouter, Route, Routes, NavLink, Params } from "react-router-dom"
 import QuestionsList from './components/QuestionsList'
 
 const App = () => {
     return (
-        <BrowserRouter>
-            <MainContainer>
+        <MainContainer>
 
             {/* <TitleContainer>
                 Welcome to the TRIVIA CHALLENGE!
@@ -24,14 +22,12 @@ const App = () => {
                 <Button black>PLAY</Button>
             </ButtonContainer> */}
 
-            <Routes>
-                <Route path="/" element={<AddQuestionForm/>}/>
-                <Route path="/" element={<QuestionsList/>}/>
-            </Routes>
+            <AddQuestionForm/>
+            
+            <QuestionsList/>
 
-            </MainContainer> 
-        
-        </BrowserRouter> 
+            
+        </MainContainer> 
     )
 }
 

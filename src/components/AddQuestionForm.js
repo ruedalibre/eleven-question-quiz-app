@@ -21,16 +21,16 @@ const AddQuestionForm = () => {
         // Esperar a que cargue la db
         try {
             await addDoc(collection(db, 'quiz_cards'), {
-                "response_code": response_code,
-                "results": [
+                response_code: response_code,
+                results: [
                 {
-                    "category": category,
-                    "subcategory":subcategory,
-                    "data_type":data_type,
-                    "difficulty": difficulty,
-                    "question": question,
-                    "correct_answer": correct_answer,
-                    "incorrect_answers":[
+                    category: category,
+                    subcategory: subcategory,
+                    data_type: data_type,
+                    difficulty: difficulty,
+                    question: question,
+                    correct_answer: correct_answer,
+                    incorrect_answers: [
                         incorrect_answers
                     ]
                 }]

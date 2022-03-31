@@ -1,47 +1,33 @@
-import React, { useState} from 'react'
+import React, { useState, useEffect} from 'react'
 import styled from 'styled-components'
 import db from '../firebase/firebaseConfig'
+import { collection, onSnapshot } from 'firebase/firestore';
+import Question from './Question'; 
 
 const QuestionsList = () => {
-    const [questions, changeQuestions] = useState([
-        {
-            response_code: 0,
-            results: [
-                {
-                    category: "General Knowledge",
-                    subcategory: undefined,
-                    data_type: "boolean",
-                    difficulty: "hard",
-                    question: "This is the correct spelling of &quot;Supercalifragilisticexpialidocious&quot;.",
-                    correct_answer: "True",
-                    incorrect_answers:[
-                        "False"
-                    ]
-                }
-            ]},
+    const [questions, changeQuestions] = useState([]);
 
-            {
-                response_code: 1,
-                results: [
-                {
-                    category: "Entertainment",
-                    subcategory: "Video Games",
-                    data_type: "boolean",
-                    difficulty: "hard",
-                    question: "Unturned originally started as a Roblox game.",
-                    correct_answer :"True",
-                    incorrect_answers: [
-                        "False"
-                    ]
-                }
-            ]}
-    ]);
+    useEffect(() => {
+        // Mantiene la conexión abierta con Firebase
+        onSnapshot(
+            collection(db, 'questions'),
+            // Contiene la vista de la db
+            (snapshot) => {
+                console.log("Se ejecutó snapshot")
+            }
+            );
+    }, []);
 
     return (
         questions.length > 0 &&
         <ListContainer>
             {questions.map((question) => (
-                <p key={question.response_code}>{question.question} - {question.difficulty}</p>
+                <Question 
+                    key={question.response_code}
+                    response_code={question.response_code} 
+                    category={question.category}
+                    question={question.question}
+                />
             ))}
         </ListContainer>
     );
