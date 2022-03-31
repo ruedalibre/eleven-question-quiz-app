@@ -1,12 +1,16 @@
 import React from 'react'
 import styled from 'styled-components'
+import Data from '../data/data'
+import { useParams } from 'react-router-dom'
 
 const CategoryTitleBar = () => {
+  const {id} = useParams();
+
     return (
       <TitleBarContainer>
-          <CategoryTitle>Entertainment:</CategoryTitle>
-          <CategoryTitle>Video Games</CategoryTitle>
-          <CategorySubtitle>Difficulty: LOW</CategorySubtitle>
+          <CategoryTitle>{data[id -1].category}</CategoryTitle>
+          <CategoryTitle>{data[id -1].subcategory}</CategoryTitle>
+          <CategorySubtitle>{data[id -1].difficulty}</CategorySubtitle>
       </TitleBarContainer>
   )
 }
