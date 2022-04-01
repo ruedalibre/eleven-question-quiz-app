@@ -14,10 +14,15 @@ const IntroScreen = (props) => {
                     Welcome to the TRIVIA CHALLENGE!
                 </TitleContainer>
 
+                <IconContainer>
+                    <p>ICONO</p>
+
+                </IconContainer>
+
                 <TextContainer>
                     You will be presented with <br /> 
                     Eleven True or False Questions <br /><br />
-                    Can You score 100%?
+                    Can You score 100% ?
                 </TextContainer>
 
                 <ButtonContainer>
@@ -29,15 +34,21 @@ const IntroScreen = (props) => {
 }
 
 const TitleContainer = styled.h1`
-    display: flex;
-    flex-direction: column;
-    margin: 50px 0;
+    display: inline-block;
+    text-align: center;
+    color: black;
 `;
 
+const IconContainer = styled.div`
+    height: 50%;
+    border: 1px solid black;
+    border-radius: 15px;
+`
+
 const TextContainer = styled.h3`
-    display: flex;
-    flex-direction: column;
-    margin: 50px 0;
+    display: inline-block;
+    text-align: center;
+    color: black;
 `;
 
 const ButtonContainer = styled.div`

@@ -4,14 +4,15 @@ const Button = styled.button`
   background: #000;
   color: #fff;
   display: inline-block;
-  padding: 20px;
+  width: 100%;
+  padding: 15px;
+  font-size: 100%;
   border: none;
   font-weight: bold;
   font-family: Arial, Helvetica, sans-serif;
   cursor: pointer;
   transition: .3s ease all;
-  border-radius: 15px;
-  margin-right: 10px;
+  border-radius: 30px; 
 
   &:hover {
     background: #44a559;
