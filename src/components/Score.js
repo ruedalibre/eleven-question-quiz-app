@@ -2,12 +2,12 @@ import React from "react";
 import MainContainer from "../elements/MainContainer";
 import FinalScoreBar from '../elements/FinalScoreBar'
 import ResultsList from '../elements/ResultsList'
-import Button from './../elements/Button'
+import Button from '../elements/Button'
 import { BrowserRouter } from "react-router-dom";
 
 import React from 'react'
 
-const ScoreScreen = () => {
+const Score = () => {
   return (
     <BrowserRouter>
       <MainContainer>
@@ -29,4 +29,4 @@ const ButtonContainer = styled.div`
   display: flex;
   flex-direction: column;
 `
-export default ScoreScreen
+export default Score;

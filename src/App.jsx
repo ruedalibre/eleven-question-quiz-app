@@ -1,33 +1,34 @@
-import Button from './elements/Button'
+import React from 'react'
+import { useNavigate } from 'react-router-dom'
 import styled from 'styled-components'
+import Button from './elements/Button'
 import MainContainer from './elements/MainContainer'
-import AddQuestionForm from './components/AddQuestionForm'
-import QuestionsList from './components/QuestionsList'
 
 const App = () => {
+    const navigate = useNavigate();
+
+    const eventHandler = () => {
+        navigate('/quiz')
+    }
+
     return (
-        <MainContainer>
+            <MainContainer>
 
-            {/* <TitleContainer>
-                Welcome to the TRIVIA CHALLENGE!
-            </TitleContainer>
+                <TitleContainer>
+                    Welcome to the TRIVIA CHALLENGE!
+                </TitleContainer>
 
-            <TextContainer>
-                You will be presented with <br /> 
-                Eleven True or False Questions <br /><br />
-                Can You score 100%?
-            </TextContainer>
+                <TextContainer>
+                    You will be presented with <br /> 
+                    Eleven True or False Questions <br /><br />
+                    Can You score 100%?
+                </TextContainer>
 
-            <ButtonContainer>
-                <Button black>PLAY</Button>
-            </ButtonContainer> */}
-
-            <AddQuestionForm/>
-            
-            <QuestionsList/>
-
-            
-        </MainContainer> 
+                <ButtonContainer>
+                    <Button onClick={() => navigate('/quiz')}>BEGIN</Button>
+                </ButtonContainer>
+                
+            </MainContainer> 
     )
 }
 

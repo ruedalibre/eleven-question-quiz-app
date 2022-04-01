@@ -13,8 +13,13 @@ const QuestionsList = () => {
             collection(db, 'questions'),
             // Contiene la vista de la db
             (snapshot) => {
-                console.log("Se ejecutó snapshot")
-            }
+                // console.log("Se ejecutó snapshot")
+                // console.log(snapshot.docs[1].data());
+                const questionsArray = snapshot.docs.map((document) => {
+                    return {...document.data(), id: document.id}
+                    })
+                    console.log(questionsArray)
+                }
             );
     }, []);
 
