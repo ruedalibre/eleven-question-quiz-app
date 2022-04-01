@@ -1,4 +1,5 @@
 import React from "react";
+import styled from 'styled-components'
 
 const FinalScoreBar = () => {
   return (
@@ -14,4 +15,4 @@ const FinalScoreContainer = styled.div`
   flex-direction: column;
 `
 
-export default FinalScoreBar
+export default FinalScoreBar;

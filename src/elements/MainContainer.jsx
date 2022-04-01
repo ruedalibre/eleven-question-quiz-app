@@ -1,9 +1,8 @@
 import styled from 'styled-components'
 
 const MainContainer = styled.div`
-    width: 100%;
-    height: 100%;
-    max-width: 400px;
+    width: 400px;
+    height: 90vh;
     padding: 40px;
     margin: 40px;
     border-radius: 20px;

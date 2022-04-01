@@ -1,4 +1,5 @@
 import React from 'react'
+import styled from 'styled-components'
 
 const ResultsList = () => {
   return (
@@ -7,7 +8,6 @@ const ResultsList = () => {
     </ResultsContainer>
   )
 }
-
 
 const ResultsContainer = styled.div`
   display: flex;

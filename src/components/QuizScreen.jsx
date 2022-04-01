@@ -1,29 +1,30 @@
 import React from "react"
-import Button from '../elements/Button'
+import styled from 'styled-components'
+import { useNavigate } from "react-router-dom"
 import MainContainer from "../elements/MainContainer"
 import CategoryTitleBar from "../elements/CategoryTitleBar"
-import styled from 'styled-components'
-// import QuestionCard from "../elements/QuestionCards"
+import Button from '../elements/Button'
 
-const Quiz = () => {
+const QuizScreen = (props) => {
+    const navigate = useNavigate();
+
     return (
         <MainContainer>
           
           <CategoryTitleBar />
 
-
-          <AnswerButtonContainer>
+          <ButtonContainer>
             <Button>T</Button>
             <Button>F</Button>
-          </AnswerButtonContainer>
+          </ButtonContainer>
 
         </MainContainer>  
     )
 }
 
-const AnswerButtonContainer = styled.div`
+const ButtonContainer = styled.div`
   display: flex;
   flex-direction: column;
 `
 
-export default Quiz;
+export default QuizScreen;

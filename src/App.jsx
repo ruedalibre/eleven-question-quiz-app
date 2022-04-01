@@ -1,52 +1,27 @@
 import React from 'react'
-import { useNavigate } from 'react-router-dom'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import styled from 'styled-components'
-import Button from './elements/Button'
-import MainContainer from './elements/MainContainer'
+import IntroScreen from './components/IntroScreen'
+import QuizScreen from './components/QuizScreen'
+import ScoreScreen from './components/ScoreScreen'
 
 const App = () => {
-    const navigate = useNavigate();
-
-    const eventHandler = () => {
-        navigate('/quiz')
-    }
-
     return (
-            <MainContainer>
-
-                <TitleContainer>
-                    Welcome to the TRIVIA CHALLENGE!
-                </TitleContainer>
-
-                <TextContainer>
-                    You will be presented with <br /> 
-                    Eleven True or False Questions <br /><br />
-                    Can You score 100%?
-                </TextContainer>
-
-                <ButtonContainer>
-                    <Button onClick={() => navigate('/quiz')}>BEGIN</Button>
-                </ButtonContainer>
-                
-            </MainContainer> 
+        <ContainerApp>
+            <BrowserRouter>
+                <Routes>
+                    <Route path="/" element={<IntroScreen/>} />
+                    <Route path="/quiz-screen" element={<QuizScreen/>} />
+                    <Route path="/score-screen" element={<ScoreScreen/>} />                    
+                </Routes>
+            </BrowserRouter>
+        </ContainerApp>
+           
     )
 }
 
-const TitleContainer = styled.h1`
-    display: flex;
-    flex-direction: column;
-    margin: 50px 0;
-`;
-
-const TextContainer = styled.h3`
-    display: flex;
-    flex-direction: column;
-    margin: 50px 0;
-`;
-
-const ButtonContainer = styled.div`
-    display: flex;
-    flex-direction: column;
+const ContainerApp = styled.div`
+    padding: 50px;
 `
 
 export default App
